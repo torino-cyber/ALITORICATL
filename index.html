@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Catálogo Atacado Torino</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<!-- ETAPA 1: ESCOLHA DO TIPO -->
+<section id="tipoCompra" class="container">
+  <h1>Catálogo Atacado Torino</h1>
+  <p class="info">
+    <strong>Atacado Grade:</strong> mínimo 24 peças por modelo (cores e tamanhos completos)<br>
+    <strong>Atacado Caixa:</strong> quantidade mínima variável por modelo
+  </p>
+
+  <div class="buttons">
+    <button onclick="selecionarTipo('grade')">Atacado Grade</button>
+    <button onclick="selecionarTipo('caixa')">Atacado Caixa</button>
+  </div>
+</section>
+
+<!-- CATÁLOGO -->
+<section id="catalogo" class="hidden">
+  <h2 id="tituloCatalogo"></h2>
+  <div id="produtos"></div>
+</section>
+
+<!-- CARRINHO -->
+<aside id="carrinho">
+  <h3>Carrinho</h3>
+  <div id="listaCarrinho"></div>
+  <p class="total">Total: R$ <span id="total">0</span></p>
+  <button onclick="abrirCheckout()">Finalizar Pedido</button>
+</aside>
+
+<!-- CHECKOUT -->
+<section id="checkout" class="hidden container">
+  <h2>Finalizar Pedido</h2>
+
+  <input type="text" id="nome" placeholder="Nome completo" required>
+  <input type="email" id="email" placeholder="Email" required>
+
+  <select id="envio">
+    <option value="Transportadora">Transportadora</option>
+    <option value="Correios">Correios</option>
+    <option value="Excursão">Excursão / Ônibus</option>
+  </select>
+
+  <button onclick="enviarWhatsApp()">Enviar pedido pelo WhatsApp</button>
+</section>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
