@@ -20,9 +20,9 @@ function renderizarProdutos() {
     .forEach(p => {
       div.innerHTML += `
         <div class="produto">
-          <img src="${p.imagem}">
-          <h4>${p.nome}</h4>
-          <p>R$ ${p.preco}</p>
+          <img src="${p.moletom-masc.png}">
+          <h4>${p.Moletom}</h4>
+          <p>R$ ${p.79,87}</p>
           <button onclick="adicionarCarrinho('${p.nome}', ${p.preco})">
             Adicionar
           </button>
